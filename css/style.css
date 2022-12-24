@@ -8,7 +8,7 @@
 
 .fundo {
     margin: 0px;
-    background-size: 50px 50px;
+    background-size: 300px 300px;
     background-color: rgb(34, 162, 182);
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
     background-image: -moz-linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
