@@ -19,4 +19,4 @@
 
 | Criador do Projeto | Última Data de Modificação |
 | ------------------ | -------------------------- |
-| Thiago Silva da Cruz | 2023-05-14                  |
+| Thiago Silva Da Cruz | 2023-05-14                  |
