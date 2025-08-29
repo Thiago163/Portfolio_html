@@ -1,69 +1,157 @@
-import React from 'react';
-import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
-import { TypeAnimation } from 'react-type-animation';
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-const HomePage = () => {
-  return (
-    <section className='bg-gray-100 py-16' id='home'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row items-center lg:space-x-12'>
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Currículo</title>
+  <link rel="icon" href="./favicons/favicon-16x16.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background: #120029;
+      color: #fff;
+    }
+    .card {
+      background: #fff;
+      color: #000;
+      border-radius: 40px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .timeline-item-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    .timeline-item-content.expanded {
+      max-height: 300px;
+      opacity: 1;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .skill-card {
+      background: #fff;
+      color: #000;
+      border-radius: 40px;
+      width: 200px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease-in-out;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
 
-          <div className='lg:w-2/5'>
-            <h1 className='text-4xl lg:text-6xl font-bold mb-4 leading-tight text-black'>
-              Olá, eu sou <span className='text-accent'>Thiago Cruz</span>
-            </h1>
-            <div className='text-lg lg:text-xl text-gray-700 font-medium'>
-              <span className='mr-2'>Sou um programador:</span>
-              <TypeAnimation
-                sequence={['Front-end', 2000, 'Back-end', 2000]}
-                speed={50}
-                wrapper='span'
-                repeat={Infinity}
-              />
-            </div>
-          </div>
+<body class="fundo">
 
-          <div className='flex flex-col gap-6 lg:w-2/5'>
-            {/* Seção de boas-vindas */}
-            <div className='flex items-start'>
-              <div>
-                <h3 className='text-xl font-semibold text-black mb-2'>Bem-vindo(a) à minha página</h3>
-                <p className='text-gray-600'>
-                  Fico feliz em ter você aqui. Explore e saiba mais sobre mim e meu trabalho.
-                </p>
-              </div>
-            </div>
-            
-            {/* Seção de formação */}
-       <div className='flex items-start'>
-          <div>
-            <h3 className='text-xl font-semibold text-black mb-2'>Formação</h3>
-            <p className='text-gray-600'>
-              Sou formado em Técnico em Eletromecânica e Análise e Desenvolvimento de Sistemas e atualmente estou estudando Manutenção Industrial na Fatec Osasco.
-            </p>
-          </div>
-        </div>
+  <header>
+    <img src="img/banner.gif" style="width: 100%; height: 300px;">
+    <nav style="background: #120029; text-align: center; position: relative; top: -5px; padding: 10px; border-radius: 0px 0px 90px 90px;">
+      <a href="index.html" style="color: #fff; text-decoration: none;"> <img src="img/home_house_10811.png"> Home</a>
+      <a href="Trabalhos.html" style="color: #fff; text-decoration: none;"> <img src="img/sharkcolor.png"> Trabalhos</a>
+      <a href="Contato.html" style="color: #fff; text-decoration: none;"> <img src="img/tooth.png"> Contatos</a>
+    </nav>
+  </header>
 
+  <h2 style="text-align: center; font-size: 40px; margin: 40px 0;">Currículo Interativo</h2>
 
-          {/* Links sociais */}
-          <div className='flex justify-center lg:justify-end mt-10 lg:mt-0'>
-            <a href='https://github.com/Thiago163' className='text-accent text-4xl md:text-5xl lg:text-6xl'>
-              <FaGithub className='ml-1' />
-            </a>
-            <a href='https://www.instagram.com/thiagocruz163/?igshid=ZDdkNTZiNTM%3D' className='text-accent text-4xl md:text-5xl lg:text-6xl ml-4'>
-              <FaInstagram />
-            </a>
-            <a href='https://www.linkedin.com/in/thiago-cruz163' className='text-accent text-4xl md:text-5xl lg:text-6xl ml-4'>
-              <FaLinkedin />
-            </a>
-            <a href='https://wa.me/qr/EUMZHUCMKY32B1' className='text-accent text-4xl md:text-5xl lg:text-6xl ml-4'>
-              <FaWhatsapp />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+  <!-- Timeline -->
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Tecnólogo em Manutenção Industrial 🎓</h3>
+    <p>Fatec Osasco (2025 - 2027)</p>
+    <div class="timeline-item-content">
+      <p>Aprofundando conhecimentos em gestão da manutenção, automação industrial e otimização de processos produtivos.</p>
+    </div>
+  </div>
 
-export default HomePage;
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Atendente de Restaurante 💼</h3>
+    <p>McDonalds (2023 - 2025)</p>
+    <div class="timeline-item-content">
+      <p>Desenvolvimento de habilidades de comunicação, agilidade no atendimento e trabalho sob pressão em ambiente dinâmico.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas 🎓</h3>
+    <p>UNIP Alphaville (Concluído)</p>
+    <div class="timeline-item-content">
+      <p>Formação em projeto, desenvolvimento, teste e manutenção de software e sistemas de informação.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Aprendiz de TI 💼</h3>
+    <p>TV Alphaville (2022)</p>
+    <div class="timeline-item-content">
+      <p>Experiência em manutenção de hardware/software, suporte a usuários e organização de inventário de TI.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Técnico em Eletromecânica 🎓</h3>
+    <p>SENAI Suzana Dias (Concluído)</p>
+    <div class="timeline-item-content">
+      <p>Base em sistemas mecânicos, elétricos e automação, com foco em manutenção de equipamentos industriais.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Aprendiz de Eletricista e Mecânico 💼</h3>
+    <p>TOPFORM (2020 - 2021)</p>
+    <div class="timeline-item-content">
+      <p>Auxílio na manutenção de máquinas industriais e registro de ordens de serviço no chão de fábrica.</p>
+    </div>
+  </div>
+
+  <div class="card" onclick="toggleDetails(this)">
+    <h3>Técnico em Desenvolvimento de Sistemas 🎓</h3>
+    <p>Etec Ermelinda Gianini Teixeira (Concluído)</p>
+    <div class="timeline-item-content">
+      <p>Capacitação em lógica de programação, banco de dados e desenvolvimento de aplicações web e desktop.</p>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <h2 style="text-align: center; font-size: 40px; margin: 60px 0 20px;">Habilidades</h2>
+  <div class="skills">
+    <div class="skill-card"><h3>Comunicação</h3></div>
+    <div class="skill-card"><h3>Trabalho em Equipe</h3></div>
+    <div class="skill-card"><h3>Proatividade</h3></div>
+    <div class="skill-card"><h3>Resolução de Problemas</h3></div>
+    <div class="skill-card"><h3>Programação</h3></div>
+    <div class="skill-card"><h3>Manutenção</h3></div>
+  </div>
+
+  <footer style="text-align: center; padding: 40px; color: #ccc;">
+    <p>Disponível para novas oportunidades e desafios.</p>
+    <p style="font-size: small;">Pirapora do Bom Jesus – SP</p>
+  </footer>
+
+  <script>
+    function toggleDetails(element) {
+      const content = element.querySelector('.timeline-item-content');
+      content.classList.toggle('expanded');
+    }
+  </script>
+
+</body>
+</html>
