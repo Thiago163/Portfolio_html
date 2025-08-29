@@ -1,62 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<link rel="icon" href="./favicons/favicon-16x16.png">
-<link rel="stylesheet" href="./css/style.css">
+<html lang="pt-BR">
 
 <head>
-<body class="fundo">
-<meta charset="UTF-8">
-<title>Portifólio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .fundo {
+            background-color: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Verdana', sans-serif;
+        }
+    </style>
 </head>
 
-<header>
-    <img src="img/banner.gif" style="width: 100%; height: 300px; margin-left: 0%; margin-right: 0%;">
+<body class="fundo">
 
-    <nav style="background: #120029; text-align: center; position: relative; top: -5px; padding: 10px; border-radius: 0px 0px 90px 90px">
-        <a href="Habilidades.html" style="color: #ffff; text-decoration: none;"> <img src="img/popcorn.png">Habilidades</a>
-        <a href="Trabalhos.html" style="color: #ffff; text-decoration: none;"> <img src="img/sharkcolor.png">Trabalhos</a>
-        <a href="Contato.html" style="color: #ffff; text-decoration: none;"> <img src="img/tooth.png">Contatos</a>
-    </nav>
-</header>
+    <header>
+        <img src="img/banner.gif" class="w-full h-[300px] object-cover">
+        <nav class="bg-[#120029] text-center relative -top-1 py-3 px-4 rounded-b-[90px] flex justify-center space-x-4 md:space-x-8">
+            <a href="Habilidades.html" class="text-white no-underline font-bold flex items-center space-x-2">
+                <img src="img/popcorn.png" alt="Ícone de Pipoca">
+                <span>Habilidades</span>
+            </a>
+            <a href="Trabalhos.html" class="text-white no-underline font-bold flex items-center space-x-2">
+                <img src="img/sharkcolor.png" alt="Ícone de Tubarão">
+                <span>Trabalhos</span>
+            </a>
+            <a href="Contato.html" class="text-white no-underline font-bold flex items-center space-x-2">
+                <img src="img/tooth.png" alt="Ícone de Dente">
+                <span>Contatos</span>
+            </a>
+        </nav>
+    </header>
 
-<h2 style="position: relative; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; top: 30px;">
-    Thiago_Cruz</h2>
+    <main class="container mx-auto p-4 max-w-[900px]">
 
-<h2 style="position: relative; text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 40px; top: 40px;">
-    My future has white sharks with popcorn tooth</h2>
+        <div class="text-center mt-12 mb-8">
+            <h2 class="text-4xl md:text-5xl font-bold">Thiago_Cruz</h2>
+            <h2 class="text-xl md:text-2xl mt-4">My future has white sharks with popcorn tooth</h2>
+        </div>
 
-    <div style="background: #ffffff; color: rgb(0, 0, 0); width: 900px; height: 810px; text-align: center; position: relative; top: 45px; border-radius: 40px; 
-        position: relative; margin: auto; top: 100px;">
-        <img src="img/eu1.jpg" style="width: 350px; height: 400px; border-radius: 0px 0px 40px 40px;">
-        <h1 style="text-align: center;">Thiago</h1>
-        
-        <p style="text-align: center; padding: 20px;"><br>Sou iniciante no universo de tecnologia 
-            e programação <br> possuo experiência em eletromecânica e estou adorando <br> esse novo universo 
-            da tecnologia, até agora me identifiquei <br> com banco de dados, frontend além da área de governancia.
-            <p>Fiquem a vontade para explorar meus trabalhos (: </p>
-        </P>
+        <div class="bg-white text-black p-6 md:p-10 text-center rounded-[40px] shadow-lg">
+            <img src="https://placehold.co/350x400/120029/white?text=Sua+Foto+aqui" class="w-full max-w-[350px] mx-auto rounded-b-[40px] shadow-md">
+            <h1 class="text-4xl font-bold mt-6">Thiago</h1>
+            <p class="mt-4 leading-relaxed">
+                Sou iniciante no universo de tecnologia e programação, possuo experiência em eletromecânica e estou adorando esse novo universo da tecnologia. Até agora me identifiquei com banco de dados, frontend além da área de governancia.
+            </p>
+            <p class="font-bold mt-4">
+                Fiquem a vontade para explorar meus trabalhos (:
+            </p>
 
-    <div style="width: 165px; height: 165px; text-align: center; position: relative; top: 45px; border-radius: 40px; 
-        position: relative; top: 30px; margin-left: 10px;">
-        <img src="img/whatsapp_qr.jpg" style="width: 110%; height: 110%; border-radius: 40px 40px 40px 40px;">
-    </div>
-   
-    <div style="width: 150px; height: 150px; text-align: center; position: relative; top: 45px; border-radius: 40px; 
-        position: relative; top: -125px; margin-left: 180px;">
-        <img src="img/instagram_qr.jpg" style="width: 110%; height: 110%; border-radius: 40px 40px 40px 40px;">
-    </div>
+            <div class="flex flex-wrap justify-center items-center mt-8 gap-4">
+                <div class="w-40 h-40 bg-white rounded-[40px] shadow-md">
+                    <img src="img/whatsapp_qr.jpg" class="w-full h-full object-cover rounded-[40px]">
+                    <p class="text-sm text-gray-500 mt-2">WhatsApp</p>
+                </div>
+                <div class="w-40 h-40 bg-white rounded-[40px] shadow-md">
+                    <img src="img/instagram_qr.jpg" class="w-full h-full object-cover rounded-[40px]">
+                    <p class="text-sm text-gray-500 mt-2">Instagram</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center mt-8 space-y-4 md:space-y-0 md:space-x-8">
+                <a href="https://github.com/Thiago163" class="text-black no-underline font-bold text-lg hover:text-gray-600 transition-colors">
+                    GitHub
+                </a>
+                <a href="https://cad.onshape.com/documents?resourceType=resourceuserowner&nodeId=610d93eca1b8ba059f66bca0" class="text-black no-underline font-bold text-lg hover:text-gray-600 transition-colors">
+                    Onshape
+                </a>
+            </div>
+        </div>
+    </main>
 
-    <div style="float: left; position: relative; top: -900px; margin-left: 90px;">
-        <a href="https://github.com/Thiago163" style="color: rgb(0, 0, 0); text-decoration: none;"> 
-        <h1 style="text-align: center; top: 30px;">github</h1>
-    </div>
-
-    <div style="float: left; position: relative; top: -940px; margin-left: 690px;">
-        <a href="https://cad.onshape.com/documents?resourceType=resourceuserowner&nodeId=610d93eca1b8ba059f66bca0" style="color: rgb(0, 0, 0); text-decoration: none;"> 
-        <h1 style="text-align: center; top: 30px;">onshape</h1>
-    </div>
+    <footer class="bg-white text-center text-slate-500 py-6 mt-12">
+        <p>&copy; 2024 Thiago Cruz. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
-    
 </html>
